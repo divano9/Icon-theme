@@ -167,21 +167,27 @@
 /*Owl-theme*/
 
 .owl-carousel .owl-nav {
-  margin-top: 10px;
+  margin-top: -15px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
   text-align: center;
   -webkit-tap-highlight-color: transparent; }
   .owl-carousel .owl-nav [class*='owl-'] {
-    color: #FFF;
+    color: #000;
     font-size: 14px;
     margin: 5px;
-    padding: 4px 7px;
-    background: #D6D6D6;
+    background: rgba(240,234,228,0.7);;
     display: inline-block;
     cursor: pointer;
-    border-radius: 3px; }
+    border-radius: 50%; 
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
     .owl-carousel .owl-nav [class*='owl-']:hover {
-      background: #869791;
-      color: #FFF;
+      background: rgba(240,234,228,1);
+      color: black;
       text-decoration: none; }
   .owl-carousel .owl-nav .disabled {
     opacity: 0.5;
@@ -208,3 +214,13 @@
       border-radius: 30px; }
     .owl-carousel .owl-dots .owl-dot.active span, .owl-carousel .owl-dots .owl-dot:hover span {
       background: #869791; }
+
+    .owl-carousel .owl-nav .owl-prev{
+        left: 0;
+        position: absolute;
+    }
+    
+    .owl-carousel .owl-nav .owl-next{
+        right: 0;
+        position: absolute;
+    }
