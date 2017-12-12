@@ -53,7 +53,7 @@ figure {
 }
 
 .navbar-brand{
-transition: 0.8s linear;
+    transition: 0.8s linear;
 }
 
 .navbar-brand img{
@@ -102,9 +102,29 @@ transition: 0.8s linear;
 .landing{
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 200px;
     position: relative;
 }
+
+.landing .container .row{
+    min-height: 100vh;
+}
+
+.landing .container{
+    position: relative;
+}
+
+.landing .container > a{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.landing .container > a .fa{
+    font-size: 32px;
+    color: #fff;
+}
+
 
 .landing:before{
     content: '';
@@ -293,7 +313,7 @@ transition: 0.8s linear;
 
 {
 
-        padding: 7px 10px;
+    padding: 7px 10px;
 }
 .newsletter form button{
     position: relative;
@@ -378,3 +398,43 @@ footer .nav{
     padding: 0.75rem 1.25rem;
 }
 
+/*svg circle progress (procenti)*/
+
+.svg{
+    transform: rotate(-90deg);
+}
+
+.svg circle {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear;
+  stroke: #333;
+  stroke-width: 1em;
+}
+.svg .bar {
+  stroke: #2dade8;
+}
+.cont {
+  display: block;
+  height: 200px;
+  width: 200px;
+  margin: 2em auto;
+  border-radius: 100%;
+  position: relative;
+  color: #fff;
+  font-family: 'Merriweather', serif; 
+}
+.cont:after {
+  position: absolute;
+  display: block;
+  height: 160px;
+  width: 160px;
+  left: 50%;
+  top: 50%;
+  content: attr(data-pct)"%";
+  margin-top: -80px;
+  margin-left: -80px;
+  border-radius: 100%;
+  line-height: 160px;
+  font-size: 2em;
+  text-shadow: 0 0 0.5em black;
+}
