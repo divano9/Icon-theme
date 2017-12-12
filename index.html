@@ -25,7 +25,7 @@
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body>
+    <body data-spy="scroll" data-target="#main-menu">
 
         <header style="background-color: rgba(0,0,0,0.3)">
             <div class="container">
@@ -39,17 +39,17 @@
 
                     <div class="collapse navbar-collapse" id="main-menu">
                         <ul class="navbar-nav ml-auto text-uppercase">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Numbers</a>
+                                <a class="nav-link" href="#numbers">Numbers</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Feedback</a>
+                                <a class="nav-link" href="#feedback">Feedback</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Download</a>
+                                <a class="nav-link" href="#download">Download</a>
                             </li>
                         </ul>
                     </div>
@@ -86,7 +86,7 @@
                     </div>
                 </div>
             </section>
-            <section class="how" style="background-image: url('img/programing.jpg')">
+            <section class="how" id="about" style="background-image: url('img/programing.jpg')">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8">
@@ -134,7 +134,7 @@
                     </div>
                 </div>
             </section>
-            <section class="rating" style="background-image: url('img/mountan.jpg');">
+            <section class="rating" id="numbers" style="background-image: url('img/mountan.jpg');">
                 <div class="container">
                     <div class="row text-center">
                         <div class="col-md-4">
@@ -245,7 +245,7 @@
                     </div>
                 </div>
             </section>
-            <section class="feedback py-5"  style="background-image:linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/forest.jpg')">
+            <section class="feedback py-5" id="feedback"  style="background-image:linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/forest.jpg')">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 mb-5">
@@ -275,7 +275,7 @@
                     </div>
                 </div>
             </section>
-            <section class="ipad" style="background-image: url('img/blur.jpg')">
+            <section class="ipad" id="download" style="background-image: url('img/blur.jpg')">
                 <div class="container d-flex flex-wrap align-content-start text-white" style="background-image: url('img/ipad.png')">
                     <h2 class="w-100 display-3">iPad version</h2>
                     <p class="w-100">

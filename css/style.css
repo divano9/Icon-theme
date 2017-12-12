@@ -3,10 +3,20 @@
     font-family: 'Merriweather', serif;
 }
 
+body{
+    position: relative;
+}
+
 header{
     position: fixed;
     width: 100%;
     z-index: 5;
+    transition: 0.8s linear;
+}
+
+header .navbar-brand.small-logo{
+    width: 80px;
+    height: 80px;
 }
 
 html{
@@ -43,7 +53,7 @@ figure {
 }
 
 .navbar-brand{
-
+transition: 0.8s linear;
 }
 
 .navbar-brand img{

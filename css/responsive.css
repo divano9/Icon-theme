@@ -53,7 +53,7 @@
     }
 
     .navbar-nav .nav-link:hover,
-    .navbar-nav li.active .nav-link{
+    .navbar-nav .nav-link.active{
         color: #2dade8 !important;
         background: transparent;
     }
