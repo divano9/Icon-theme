@@ -1,0 +1,76 @@
+
+@media(min-width:576px){
+
+    .navbar-brand img{
+        max-width: 80%;
+    } 
+
+    footer .nav{
+        display: flex;
+    }
+
+}
+
+@media(min-width:768px){
+
+    header{
+        padding: 20px 0 10px 0;
+    }
+
+    .navbar-brand{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 0;
+        left: 0;
+    } 
+
+    .navbar-brand img{
+        max-width: 100%;
+        transition: none;
+    } 
+
+    .rating img{
+        max-width: 100%;
+
+    }
+
+    .star figure{
+        max-width: 100%;
+    }
+
+    footer h1{
+        text-align: left;
+    }
+
+    footer h1 img{
+        max-width: 100%;
+    }
+
+    #main-menu .navbar-nav{
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav li.active .nav-link{
+        color: #2dade8 !important;
+        background: transparent;
+    }
+
+    footer .share{
+        text-align: right;
+    }
+
+}
+
+
+
+
+@media(min-width:992px){
+
+    .container{
+        width: 980px;
+    }
+
+}
