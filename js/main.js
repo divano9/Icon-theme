@@ -60,7 +60,7 @@ $(document).ready(function () {
             margin: 10,
             dots: false,
             nav: true,
-            navText: ['<','>'],
+            navText: ['<', '>'],
             responsiveClass: true,
             responsive: {
                 0: {
@@ -76,47 +76,61 @@ $(document).ready(function () {
         });
 
     }
-    
-     var currentRating = $('#example-fontawesome-o').data('current-rating');
 
-        $('.stars-example-fontawesome-o .current-rating')
+    var currentRating = $('#example-fontawesome-o').data('current-rating');
+
+    $('.stars-example-fontawesome-o .current-rating')
             .find('span')
             .html(currentRating);
 
-        $('.stars-example-fontawesome-o .clear-rating').on('click', function(event) {
+    $('.stars-example-fontawesome-o .clear-rating').on('click', function (event) {
+        event.preventDefault();
+
+        $('#example-fontawesome-o')
+                .barrating('clear');
+    });
+
+    $('.example-fontawesome-o').each(function () {
+        var currentRating = $(this).data('current-rating');
+
+        $(this).find('.current-rating')
+                .find('span')
+                .html(currentRating);
+
+        $(this).find('.clear-rating').on('click', function (event) {
             event.preventDefault();
 
-            $('#example-fontawesome-o')
-                .barrating('clear');
+            $(this)
+                    .barrating('clear');
         });
-    
-    $('#example-fontawesome-o').barrating({
+        $(this).barrating({
             theme: 'fontawesome-stars-o',
             showSelectedRating: false,
             initialRating: currentRating,
-            onSelect: function(value, text) {
+            onSelect: function (value, text) {
                 if (!value) {
-                    $('#example-fontawesome-o')
-                        .barrating('clear');
+                    $(this)
+                            .barrating('clear');
                 } else {
-                    $('.stars-example-fontawesome-o .current-rating')
-                        .addClass('hidden');
+                    $(this).find('.current-rating')
+                            .addClass('hidden');
 
-                    $('.stars-example-fontawesome-o .your-rating')
-                        .removeClass('hidden')
-                        .find('span')
-                        .html(value);
+                    $(this).find('.your-rating')
+                            .removeClass('hidden')
+                            .find('span')
+                            .html(value);
                 }
             },
-            onClear: function(value, text) {
-                $('.stars-example-fontawesome-o')
-                    .find('.current-rating')
-                    .removeClass('hidden')
-                    .end()
-                    .find('.your-rating')
-                    .addClass('hidden');
+            onClear: function (value, text) {
+                $(this).find('.stars-example-fontawesome-o')
+                        .find('.current-rating')
+                        .removeClass('hidden')
+                        .end()
+                        .find('.your-rating')
+                        .addClass('hidden');
             }
         });
+    });
 
 
 
