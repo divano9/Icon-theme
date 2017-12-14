@@ -77,18 +77,7 @@ $(document).ready(function () {
 
     }
 
-    var currentRating = $('#example-fontawesome-o').data('current-rating');
 
-    $('.stars-example-fontawesome-o .current-rating')
-            .find('span')
-            .html(currentRating);
-
-    $('.stars-example-fontawesome-o .clear-rating').on('click', function (event) {
-        event.preventDefault();
-
-        $('#example-fontawesome-o')
-                .barrating('clear');
-    });
 
     $('.example-fontawesome-o').each(function () {
         var currentRating = $(this).data('current-rating');
